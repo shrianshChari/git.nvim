@@ -25,7 +25,7 @@ use {
 
 ## Features
 
-- Run git command in Neovim with `:Git`. Eg: `:Git status`
+- Run git command in Neovim with `:Git` or `:G`. Eg: `:Git status` or `:G status`
 - Open git blame window, press enter on a line to view the commit where the line changed
 - Open git browse, open pull request, create pull request in Github and Gitlab
 - Git diff
@@ -80,9 +80,9 @@ require('git').setup({
 Eg: 
 `:Git checkout -b test`
 
-`:GitDiff` opens a new diff that compares against the current index. You can also provide any valid git rev to the command. Eg: `:GitDiff HEAD~2`
+`:GitDiff` or `:GDiff` opens a new diff that compares against the current index. You can also provide any valid git rev to the command. Eg: `:GitDiff HEAD~2`
 
-`:GitDiffClose` close the git diff window
+`:GitDiffClose` or `:GDiffClose` close the git diff window
 
 `:GitCreatePullRequest` create pull request in git repository, the default target branch is set in the `target_branch` option. If you provide the branch then the default `target_branch` will be ignored
 
