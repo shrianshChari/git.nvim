@@ -7,16 +7,13 @@ git.nvim is the simple clone of the plugin [vim-fugitive](https://github.com/tpo
 [vim plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'shrianshChari/git.nvim', { 'branch': 'shortcut' }
+Plug 'dinhhuy258/git.nvim'
 ```
 
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use {
-  'shrianshChari/git.nvim',
-  branch = 'shortcut',
-}
+use 'dinhhuy258/git.nvim',
 ```
 
 ## Requirements
