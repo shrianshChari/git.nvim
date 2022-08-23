@@ -6,15 +6,16 @@ git.nvim is the simple clone of the plugin [vim-fugitive](https://github.com/tpo
 
 [vim plug](https://github.com/junegunn/vim-plug)
 
-```sh
-Plug 'dinhhuy258/git.nvim'
+```vim
+Plug 'shrianshChari/git.nvim', { 'branch': 'shortcut' }
 ```
 
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
-```sh
+```lua
 use {
-  'dinhhuy258/git.nvim'
+  'shrianshChari/git.nvim',
+  branch = 'shortcut',
 }
 ```
 
@@ -25,7 +26,7 @@ use {
 
 ## Features
 
-- Run git command in Neovim with `:Git`. Eg: `:Git status`
+- Run git command in Neovim with `:Git` or `:G`. Eg: `:Git status` or `:G status`
 - Open git blame window, press enter on a line to view the commit where the line changed
 - Open git browse, open pull request, create pull request in Github and Gitlab
 - Git diff
@@ -75,14 +76,14 @@ require('git').setup({
 
 ## Command
 
-`:Git` run git command in terminal
+`:Git` or `:G` run git command in terminal
 
 Eg: 
-`:Git checkout -b test`
+`:Git checkout -b test` OR `:G checkout -b test`
 
-`:GitDiff` opens a new diff that compares against the current index. You can also provide any valid git rev to the command. Eg: `:GitDiff HEAD~2`
+`:GitDiff` or `:GDiff` opens a new diff that compares against the current index. You can also provide any valid git rev to the command. Eg: `:GitDiff HEAD~2`
 
-`:GitDiffClose` close the git diff window
+`:GitDiffClose` or `:GDiffClose` close the git diff window
 
 `:GitCreatePullRequest` create pull request in git repository, the default target branch is set in the `target_branch` option. If you provide the branch then the default `target_branch` will be ignored
 

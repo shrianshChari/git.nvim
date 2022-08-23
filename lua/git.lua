@@ -73,6 +73,30 @@ function M.setup(cfg)
     {
       bang = true,
     })
+
+  -- Shortened git command to mimic fugitive.vim
+  vim.api.nvim_create_user_command(
+    'G',
+    'lua require("git.cmd").cmd(<f-args>)',
+    {
+      bang = true,
+      nargs = '*',
+    })
+
+  vim.api.nvim_create_user_command(
+    'GDiff',
+    'lua require("git.diff").open(<f-args>)',
+    {
+      bang = true,
+      nargs = '*',
+    })
+
+  vim.api.nvim_create_user_command(
+    'GDiffClose',
+    'lua require("git.diff").close()',
+    {
+      bang = true,
+    })
 end
 
 return M
