@@ -43,6 +43,8 @@ Configuration can be passed to the setup function. Here is an example with most 
 
 ```lua
 require('git').setup({
+  default_mappings = true, -- NOTE: `quit_blame` and `blame_commit` are still merged to the keymaps even if `default_mappings = false`
+
   keymaps = {
     -- Open blame window
     blame = "<Leader>gb",
